@@ -1,0 +1,216 @@
+/* 
+
+This CSS file is contains the CSS rule sets for 
+    - index.html
+    - any universal elements that all pages use
+
+The CSS for the take-action.html is in take-action.css
+
+*/
+
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+body,
+html {
+  height: 100%;
+  font-size: 20px; 
+  font-family: "Recursive", sans-serif; 
+  line-height: 1.5em; 
+  margin: 0em;
+  color: white; 
+  background-color: #3772FF; 
+  box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-family: "Recursive", sans-serif;
+  color: #DF2935;
+  text-align: center;
+}
+
+h2 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: "Recursive", sans-serif;
+  color: #DF2935;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+p a {
+  color: #DF2935;
+  text-decoration: none;
+}
+
+/************************************************/
+/*************** CSS FOR NAV BAR ****************/
+/************************************************/
+
+ul.nav-bar {
+  /* Styling for the <ul class="nav-bar"> element */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3772FF;
+  border-style: solid;
+  border-color: #3772FF;
+}
+
+li.nav {
+  /* Styling for the <li class="nav"> element */
+  float: right;
+  font-size: 15px;
+}
+
+
+li.nav a {
+  /* Styling for the <a> elements in <li class="nav"> */
+  display: block;
+  color: #0D38D3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+li.nav a:hover {
+  /* Styling for the <a> elements when the mouse is hovering in <li class="nav"> */
+  background-color: #0D38D3;
+  color: #DF2935;
+}
+
+/************************************************/
+/*********** CSS FOR FLEXBOX HEADING ************/
+/************************************************/
+.flex-container {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  justify-content: center; 
+  align-items: center; 
+
+  /* Design properties */
+  background-color: #DF2935;
+  width: 800px;
+  padding: 5px;
+
+  /* Positioning properties */
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 40%; /*up or down */
+
+}
+
+/* the left box */
+.heading-home {
+  padding: 1%;
+  color: #3772FF;
+  font-size: 50px;
+  letter-spacing: 10px;
+  line-height: 60px;
+  text-align: center;
+  text-shadow: 1px 1px blue;
+
+}
+
+/* the right box */
+.intro-text {
+  background-color: #3772FF; 
+  padding: 4%;
+  margin: 3%;
+  color: #0D38D3; 
+  font-size: 20px; 
+  letter-spacing: 2px; 
+  line-height: 1.4em; 
+  text-align: center;
+  text-shadow: 1px 1px red;
+
+}
+.textbox {
+  background-color: #DF2935;
+  padding: 3%;
+  margin: 20%;
+  color: #0D38D3; /* color of font */
+  font-size: 20px; /* font size*/
+  letter-spacing: 2px; /* space between letters */
+  line-height: 1.4em; /* space between lines */
+  text-align: center;
+}
+
+/************************************************/
+/*************** PARALLAX SCROLL ****************/
+/************************************************/
+
+/*-----------TEXT SECTIONS-----------*/
+
+
+.text-section {
+  background-color: #0D38D3;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+}
+
+/*---------IMAGE STYLING + PARALLAX PROPERTY---------*/
+
+
+.main-message,
+.image-one,
+.image-two {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #DF2935;
+  background-size: cover;
+  min-height: 100%; /* This adjusts the height of the image */
+
+  /* parallax scrolling effect here */
+  background-attachment: fixed;
+}
+
+
+.main-message {
+  background-image: url("https://cdn.glitch.com/d6bd5c92-5add-4471-b1e1-1eb91b267e6e%2Frain-4337473_640.jpg?v=1595983351967");
+}
+
+
+.image-one {
+  background-image: url("https://cdn.glitch.com/d6bd5c92-5add-4471-b1e1-1eb91b267e6e%2Froad-street_THUGN63UUN.jpg?v=1595983186983");
+}
+
+
+.image-two {
+  background-image: url("https://cdn.glitch.com/d6bd5c92-5add-4471-b1e1-1eb91b267e6e%2Frainbow-3805222_1280.webp?v=1595983202233");
+}
+
+
+/*-----------IMAGE ATTRIBUTIONS (if required)-----------*/
+.attributions {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#links {
+  font: 14px "Recursive", sans-serif;
+  color: white;
+}
+
+/******************************************************/
+/***** CHANGE INDEX.HTML CSS BASED ON SCREEN SIZE *****/
+/******************************************************/
+
+/* breakpoint if the screen is 700px or less */
+@media screen and (max-width 700px) {
+  .flex-container {
+    flex-wrap: wrap;
+    top: 20%;
+  }
+}
